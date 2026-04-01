@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shaurya Singh — Software Dev & Creative Editor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+  <!-- Cursor -->
+  <div id="cur-dot"></div>
+  <div id="cur-ring"></div>
+
+  <!-- Background -->
+  <div class="bg-noise"></div>
+  <canvas id="bg-canvas"></canvas>
+  <div class="scanlines"></div>
+
+  <!-- ═══ NAV ═══ -->
+  <nav id="navbar">
+    <div class="nav-brand" onclick="scrollTo({top:0,behavior:'smooth'})">
+      <span class="brand-bracket">[</span>SS<span class="brand-bracket">]</span>
+    </div>
+    <div class="nav-center">
+      <span class="nav-status">
+        <span class="status-dot"></span>
+        Available for opportunities
+      </span>
+    </div>
+    <div class="nav-links">
+      <a href="#about">about</a>
+      <a href="#skills">skills</a>
+      <a href="#projects">projects</a>
+      <a href="#experience">work</a>
+      <a href="#contact" class="nav-cta">hire me</a>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <section id="hero">
+    <div class="hero-left">
+      <div class="hero-line-top">
+        <span class="hl-tag">MCA Student</span>
+        <span class="hl-sep">×</span>
+        <span class="hl-tag">Kalyanpur, India</span>
+      </div>
+      <h1 class="hero-name">
+        <span class="hn-first">Shaurya</span>
+        <span class="hn-last">Singh</span>
+      </h1>
+      <div class="hero-roles">
+        <span class="role-prefix">_</span>
+        <span id="role-text"></span>
+        <span class="role-cursor">|</span>
+      </div>
+      <p class="hero-summary">
+        Motivated MCA student combining software development with creative storytelling. 
+        I build full-stack web apps and craft compelling visual content that connects with audiences.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn-main">
+          <span>View Projects</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="mailto:shauryasingh.singh936@gmail.com" class="btn-ghost">Get In Touch</a>
+      </div>
+      <div class="hero-socials">
+        <a href="mailto:shauryasingh.singh936@gmail.com" class="hsoc" title="Email">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        </a>
+        <a href="tel:+917985675606" class="hsoc" title="Phone">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 5.55 5.55l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-photo-wrap">
+        <!--
+          DROP YOUR PHOTO HERE:
+          Name your photo "shaurya.jpg" and place it in the assets/ folder.
+          Or change the src below to match your filename.
+        -->
+        <img
+          src="assets/shaurya.jpg"
+          alt="Shaurya Singh"
+          class="hero-photo"
+          onerror="this.src='https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&h=700&fit=crop'"
+        />
+        <div class="photo-border-tl"></div>
+        <div class="photo-border-br"></div>
+        <div class="photo-label">
+          <span class="fira">shaurya.singh</span>
+          <span class="photo-dot"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ABOUT ═══ -->
+  <section id="about">
+    <div class="container">
+      <div class="sec-header rv">
+        <p class="sec-tag"><span>//</span> 01. about_me</p>
+        <h2 class="sec-title">The Story<span class="accent">.</span></h2>
+        <div class="sec-bar"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-text rv">
+          <p class="atext">
+            I'm <strong>Shaurya Singh</strong>, a Master of Computer Application student with a rare blend of 
+            <strong>technical depth</strong> and <strong>creative flair</strong>. While most developers write code, 
+            I also craft visual stories — making me someone who understands both the logic behind a system 
+            and the emotion behind a frame.
+          </p>
+          <p class="atext">
+            Currently working as a <strong>Marketing Intern at Bitz Me Up</strong>, I've gained real-world 
+            experience in campaigns, brand strategy, and data-driven content — skills that make me a 
+            well-rounded developer who understands the human side of technology.
+          </p>
+          <p class="atext">
+            Outside of screens, you'll find me on the football pitch or cricket ground, or coordinating 
+            events as Dance Club co-ordinator — because great engineers also know how to lead, collaborate, and perform.
+          </p>
+        </div>
+        <div class="about-cards rv d2">
+          <div class="acard">
+            <div class="acard-icon">🎓</div>
+            <div class="acard-val">MCA</div>
+            <div class="acard-label">Pursuing Masters</div>
+          </div>
+          <div class="acard">
+            <div class="acard-icon">💼</div>
+            <div class="acard-val">Intern</div>
+            <div class="acard-label">Bitz Me Up</div>
+          </div>
+          <div class="acard">
+            <div class="acard-icon">🎬</div>
+            <div class="acard-val">Video</div>
+            <div class="acard-label">Editor & Creator</div>
+          </div>
+          <div class="acard">
+            <div class="acard-icon">⚽</div>
+            <div class="acard-val">Sports</div>
+            <div class="acard-label">Football & Cricket</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SKILLS ═══ -->
+  <section id="skills">
+    <div class="container">
+      <div class="sec-header rv">
+        <p class="sec-tag"><span>//</span> 02. skills</p>
+        <h2 class="sec-title">Arsenal<span class="accent">.</span></h2>
+        <div class="sec-bar"></div>
+      </div>
+      <div class="skills-layout">
+        <div class="skill-block rv">
+          <div class="sb-label">
+            <span class="sb-num">01</span>
+            <span class="sb-name">Development</span>
+          </div>
+          <div class="sb-pills">
+            <span class="pill p-orange">Python</span>
+            <span class="pill p-orange">Django</span>
+            <span class="pill p-orange">HTML / CSS</span>
+            <span class="pill p-orange">JavaScript</span>
+            <span class="pill p-orange">REST API</span>
+          </div>
+        </div>
+        <div class="skill-block rv d1">
+          <div class="sb-label">
+            <span class="sb-num">02</span>
+            <span class="sb-name">Data & Backend</span>
+          </div>
+          <div class="sb-pills">
+            <span class="pill p-green">SQL</span>
+            <span class="pill p-green">Database Design</span>
+            <span class="pill p-green">NLP Logic</span>
+            <span class="pill p-green">Data Analysis</span>
+          </div>
+        </div>
+        <div class="skill-block rv d2">
+          <div class="sb-label">
+            <span class="sb-num">03</span>
+            <span class="sb-name">Creative</span>
+          </div>
+          <div class="sb-pills">
+            <span class="pill p-pink">Video Editing</span>
+            <span class="pill p-pink">Content Creation</span>
+            <span class="pill p-pink">Social Media</span>
+            <span class="pill p-pink">Brand Strategy</span>
+          </div>
+        </div>
+        <div class="skill-block rv d3">
+          <div class="sb-label">
+            <span class="sb-num">04</span>
+            <span class="sb-name">Soft Skills</span>
+          </div>
+          <div class="sb-pills">
+            <span class="pill p-blue">Team Collaboration</span>
+            <span class="pill p-blue">Communication</span>
+            <span class="pill p-blue">Project Management</span>
+            <span class="pill p-blue">Critical Thinking</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PROJECTS ═══ -->
+  <section id="projects">
+    <div class="container">
+      <div class="sec-header rv">
+        <p class="sec-tag"><span>//</span> 03. projects</p>
+        <h2 class="sec-title">Built<span class="accent">.</span></h2>
+        <div class="sec-bar"></div>
+      </div>
+      <div class="projects-row" id="proj-row">
+
+        <div class="proj-card rv big-card">
+          <div class="pc-num">01</div>
+          <div class="pc-accent-bar"></div>
+          <div class="pc-content">
+            <div class="pc-top">
+              <span class="pc-cat">Full-Stack Web App</span>
+              <div class="pc-links">
+                <a href="#" class="pcl" title="GitHub">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="pc-title">Social Media Platform</h3>
+            <p class="pc-desc">
+              Built an interactive social media website integrated into a Django-based web application. 
+              Features NLP logic for intelligent user query responses, automated support system, 
+              and engagement-boosting tools — a full-stack platform from ground up.
+            </p>
+            <div class="pc-tech">
+              <span>Django</span>
+              <span>Python</span>
+              <span>NLP</span>
+              <span>SQL</span>
+              <span>HTML/CSS</span>
+            </div>
+          </div>
+          <div class="pc-glow"></div>
+        </div>
+
+        <div class="proj-card rv d1">
+          <div class="pc-num">02</div>
+          <div class="pc-accent-bar green-bar"></div>
+          <div class="pc-content">
+            <div class="pc-top">
+              <span class="pc-cat">Marketing Tech</span>
+            </div>
+            <h3 class="pc-title">Campaign Analytics Dashboard</h3>
+            <p class="pc-desc">
+              Data-driven marketing dashboard to track campaign performance, 
+              customer behaviour trends, and brand engagement metrics — built during 
+              internship at Bitz Me Up.
+            </p>
+            <div class="pc-tech green-tech">
+              <span>Python</span>
+              <span>Data Analysis</span>
+              <span>SQL</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-card rv d2">
+          <div class="pc-num">03</div>
+          <div class="pc-accent-bar pink-bar"></div>
+          <div class="pc-content">
+            <div class="pc-top">
+              <span class="pc-cat">Creative Tech</span>
+            </div>
+            <h3 class="pc-title">Video Content Pipeline</h3>
+            <p class="pc-desc">
+              Designed and executed a structured video production and editing workflow for 
+              social media content. From raw footage to final publish-ready output — 
+              storytelling meets technical precision.
+            </p>
+            <div class="pc-tech pink-tech">
+              <span>Video Editing</span>
+              <span>Content Strategy</span>
+              <span>Social Media</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ EXPERIENCE ═══ -->
+  <section id="experience">
+    <div class="container">
+      <div class="sec-header rv">
+        <p class="sec-tag"><span>//</span> 04. experience</p>
+        <h2 class="sec-title">Work<span class="accent">.</span></h2>
+        <div class="sec-bar"></div>
+      </div>
+      <div class="timeline">
+        <div class="tl-item rv">
+          <div class="tl-dot"></div>
+          <div class="tl-line"></div>
+          <div class="tl-card">
+            <div class="tl-header">
+              <div>
+                <h3 class="tl-role">Marketing Intern</h3>
+                <p class="tl-company">Bitz Me Up</p>
+              </div>
+              <span class="tl-date">Aug 2024 – Present</span>
+            </div>
+            <ul class="tl-points">
+              <li>Planned and executed marketing campaigns from ideation to delivery</li>
+              <li>Researched market trends and analysed customer behaviour patterns</li>
+              <li>Created social media and email content that boosted brand presence</li>
+              <li>Tracked and reported campaign performance metrics using data tools</li>
+            </ul>
+            <div class="tl-tags">
+              <span>Marketing</span><span>Content</span><span>Data Analysis</span><span>Campaigns</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item rv d1">
+          <div class="tl-dot tl-dot-green"></div>
+          <div class="tl-card">
+            <div class="tl-header">
+              <div>
+                <h3 class="tl-role">Dance Club Co-ordinator</h3>
+                <p class="tl-company">LPCPS, Gomti Nagar</p>
+              </div>
+              <span class="tl-date">Leadership Role</span>
+            </div>
+            <ul class="tl-points">
+              <li>Led event coordination for college dance club activities</li>
+              <li>Managed team scheduling, rehearsals, and performances</li>
+              <li>Developed strong leadership and people management skills</li>
+            </ul>
+            <div class="tl-tags">
+              <span>Leadership</span><span>Events</span><span>Teamwork</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT ═══ -->
+  <section id="contact">
+    <div class="container">
+      <div class="sec-header rv">
+        <p class="sec-tag"><span>//</span> 05. contact</p>
+        <h2 class="sec-title">Let's Talk<span class="accent">.</span></h2>
+        <div class="sec-bar"></div>
+      </div>
+      <div class="contact-layout">
+        <div class="contact-left rv">
+          <p class="contact-intro">
+            I'm actively looking for <strong>internships</strong>, <strong>full-time roles</strong>, 
+            and <strong>freelance video/dev projects</strong>. 
+            Whether you need a developer, a creative, or both — I'm your person.
+          </p>
+          <div class="contact-info-list">
+            <a href="mailto:shauryasingh.singh936@gmail.com" class="cil-item">
+              <div class="cil-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </div>
+              <div>
+                <div class="cil-label">Email</div>
+                <div class="cil-val">shauryasingh.singh936@gmail.com</div>
+              </div>
+            </a>
+            <a href="tel:+917985675606" class="cil-item">
+              <div class="cil-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 5.55 5.55l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16z"/></svg>
+              </div>
+              <div>
+                <div class="cil-label">Phone</div>
+                <div class="cil-val">+91 79856 75606</div>
+              </div>
+            </a>
+            <div class="cil-item cil-address">
+              <div class="cil-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <div class="cil-label">Location</div>
+                <div class="cil-val">Kalyanpur, India</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-right rv d2">
+          <div class="cf-wrap">
+            <div class="cf-row">
+              <div class="cf-group">
+                <label class="cf-label">Name *</label>
+                <input type="text" class="cf-input" placeholder="Your name" id="cf-name"/>
+              </div>
+              <div class="cf-group">
+                <label class="cf-label">Email *</label>
+                <input type="email" class="cf-input" placeholder="your@email.com" id="cf-email"/>
+              </div>
+            </div>
+            <div class="cf-group">
+              <label class="cf-label">Subject</label>
+              <input type="text" class="cf-input" placeholder="Internship, project, collaboration..."/>
+            </div>
+            <div class="cf-group">
+              <label class="cf-label">Message *</label>
+              <textarea class="cf-input cf-textarea" placeholder="Tell me about the opportunity..." id="cf-msg"></textarea>
+            </div>
+            <button class="btn-main cf-btn" onclick="cfSend()">
+              <span>Send Message</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="brand-bracket">[</span>SS<span class="brand-bracket">]</span>
+        <span class="footer-name">Shaurya Singh</span>
+      </div>
+      <div class="footer-copy fira">
+        © 2026 · Made with ❤️ · Kalyanpur, India
+      </div>
+      <div class="footer-note fira">shauryasingh.singh936</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
